@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "37ded395-4789-4ed6-bc6d-8e03ed87a8d5",
+		"name": "Veiculo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8586282"
+	},
+	"item": [
+		{
+			"name": "Adicionar veiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"carro1\",\r\n    \"marca\": \"ford\",\r\n    \"cor\": \"preta\",\r\n    \"ano\": \"2002\",\r\n    \"descricao\": \"Um carro\",\r\n    \"vendido\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/veiculos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"veiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar veiculo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"carro1\",\r\n    \"marca\": \"ford\",\r\n    \"cor\": \"preta\",\r\n    \"ano\": \"2002\",\r\n    \"descricao\": \"Um carro\",\r\n    \"vendido\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/veiculos/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"veiculos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar campo do veiculo",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cor\": \"branco\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/veiculos/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"veiculos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os veiculos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"marca\": \"volkswagen\",\r\n    \"cor\": \"branca\",\r\n    \"ano\": \"2000\",\r\n    \"descricao\": \"Um carro\",\r\n    \"vendido\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/veiculos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"veiculos"
+					],
+					"query": [
+						{
+							"key": "cor",
+							"value": "preta",
+							"disabled": true
+						},
+						{
+							"key": "marca",
+							"value": "toyota",
+							"disabled": true
+						},
+						{
+							"key": "ano",
+							"value": "2002",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Procurar por veiculo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"marca\": \"volkswagen\",\r\n    \"cor\": \"branca\",\r\n    \"ano\": \"2000\",\r\n    \"descricao\": \"Um carro\",\r\n    \"vendido\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/veiculos/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"veiculos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar veiculo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"marca\": \"volkswagen\",\r\n    \"cor\": \"branca\",\r\n    \"ano\": \"2000\",\r\n    \"descricao\": \"Um carro\",\r\n    \"vendido\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/veiculos/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"veiculos",
+						"1"
+					],
+					"query": [
+						{
+							"key": "cor",
+							"value": "preta",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
